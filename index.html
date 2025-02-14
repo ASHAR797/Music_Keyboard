@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum kit js</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #212121;
+            background-image: url('https://thumbs.dreamstime.com/blog/2018/03/black-white-photography-tips-500-different-shades-grey-23794-image109410897.jpg');
+            background-size: cover;
+            background-position: center;
+
+        }
+        body > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .music-btn{
+            width: 100px;
+            padding:  10px 0px;
+            background-color: #f44336;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .music-btn span{
+            font-size: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="music-btn" id="clap-btn">A<span>clap</span></div>
+        <div class="music-btn" id="hihat-btn">S<span>Hihat</span></div>
+        <div class="music-btn" id="kick-btn">D<span>Kick</span></div>
+        <div class="music-btn" id="openhat-btn">F<span>Openhat</span></div>
+        <div class="music-btn" id="boom-btn">G<span>Boom</span></div>
+        <div class="music-btn" id="ride-btn">J<span>Ride</span></div>
+        <div class="music-btn" id="tom-btn">K<span>Tom</span></div>
+        <div class="music-btn" id="tink-btn">L<span>Tink</span></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
