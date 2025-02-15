@@ -26,12 +26,14 @@ const songEffects = {
     "y": new Audio("sound/impact-rubble-smash-betacut-1-00-01.mp3"),
     "z": new Audio("sound/long-ride-cymbal-2-36337.mp3"),
 }
+let wrongAudio = new Audio("sound/dethpiano-108364.mp3")
 document.addEventListener("keydown", function (Event) {
     const e = Event.key.toLowerCase();
     if (songEffects[e]) {
         songEffects[e].play();
     }
+    
     else {
-        
+        wrongAudio.play()
     }
 })
