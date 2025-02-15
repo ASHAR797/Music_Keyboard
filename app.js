@@ -27,7 +27,11 @@ const songEffects = {
     "z": new Audio("sound/long-ride-cymbal-2-36337.mp3"),
 }
 document.addEventListener("keydown", function (Event) {
-    if (songEffects[Event.key]) {
-        songEffects[Event.key].play();
+    const e = Event.key.toLowerCase();
+    if (songEffects[e]) {
+        songEffects[e].play();
+    }
+    else {
+        
     }
 })
