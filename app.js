@@ -31,6 +31,11 @@ document.addEventListener("keydown", function (Event) {
     const e = Event.key.toLowerCase();
     if (songEffects[e]) {
         songEffects[e].play();
+       let element = document.getElementsByClassName(e)[0];
+       element.classList.add("music-btn-active");
+       setTimeout(()=>{
+              element.classList.remove("music-btn-active");
+       }, 175)
     }
     
     else {

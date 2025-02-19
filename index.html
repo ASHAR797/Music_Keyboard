@@ -1,56 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drum kit js</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #212121;
-            background-image: url('https://thumbs.dreamstime.com/blog/2018/03/black-white-photography-tips-500-different-shades-grey-23794-image109410897.jpg');
-            background-size: cover;
-            background-position: center;
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+        background-image: url("https://thumbs.dreamstime.com/blog/2018/03/black-white-photography-tips-500-different-shades-grey-23794-image109410897.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      body > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        width: 75%;
+      }
+      .music-btn {
+        width: 100px;
+        padding: 10px 0px;
+        background-color: black;
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.3s;
+        border: 1px solid white;
+        text-align: center;
+      }
+      .music-btn-active {
+        background-color: transparent;
+        transform: scale(1.2);
+        border: 1px solid yellow;
+      }
+      .music-btn span {
+        font-size: 15px;
+        display: block;
+      }
 
-        }
-        body > div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        .music-btn{
-            width: 100px;
-            padding:  10px 0px;
-            background-color: #f44336;
-            color: #fff;
-            font-size: 30px;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: all 0.3s;
-            text-align: center;
-        }
-        .music-btn span{
-            font-size: 15px;
-            display: block;
-        }
+      .barlow-condensed-regular {
+        font-family: "Barlow Condensed", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .montserrat{
+        font-family: "Montserrat", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <div class="music-btn" id="clap-btn">A<span>clap</span></div>
-        <div class="music-btn" id="hihat-btn">S<span>Hihat</span></div>
-        <div class="music-btn" id="kick-btn">D<span>Kick</span></div>
-        <div class="music-btn" id="openhat-btn">F<span>Openhat</span></div>
-        <div class="music-btn" id="boom-btn">G<span>Boom</span></div>
-        <div class="music-btn" id="ride-btn">J<span>Ride</span></div>
-        <div class="music-btn" id="tom-btn">K<span>Tom</span></div>
-        <div class="music-btn" id="tink-btn">L<span>Tink</span></div>
+      <div class="music-btn a barlow-condensed-regular" id="clap-btn">A<span class="montserrat">Clap</span></div>
+      <div class="music-btn s barlow-condensed-regular" id="hihat-btn">S<span class="montserrat">Hihat</span></div>
+      <div class="music-btn d barlow-condensed-regular" id="kick-btn">D<span class="montserrat">Kick</span></div>
+      <div class="music-btn f barlow-condensed-regular" id="openhat-btn">F<span class="montserrat">Openhat</span></div>
+      <div class="music-btn g barlow-condensed-regular" id="boom-btn">G<span class="montserrat">Boom</span></div>
+      <div class="music-btn j barlow-condensed-regular" id="ride-btn">J<span class="montserrat">Ride</span></div>
+      <div class="music-btn k barlow-condensed-regular" id="tom-btn">K<span class="montserrat">Tom</span></div>
+      <div class="music-btn l barlow-condensed-regular" id="tink-btn">L<span class="montserrat">Tink</span></div>
+      <div class="music-btn b barlow-condensed-regular" id="saxophone-btn">B<span class="montserrat"> Saxophone</span></div>
+      <div class="music-btn c barlow-condensed-regular" id="clang-btn">C<span class="montserrat">Metal Clang</span></div>
+      <div class="music-btn e barlow-condensed-regular" id="synth-btn">E<span class="montserrat">Synth Stab</span></div>
+      <div class="music-btn h barlow-condensed-regular" id="beep-btn">H<span class="montserrat">Beep</span></div>
+      <div class="music-btn i barlow-condensed-regular" id="wah-btn">I<span class="montserrat">Wah</span></div>
+      <div class="music-btn m barlow-condensed-regular" id="violin-btn">M<span class="montserrat">Violin</span></div>
+      <div class="music-btn n barlow-condensed-regular" id="stab-btn">N<span class="montserrat">Stab</span></div>
+      <div class="music-btn o barlow-condensed-regular" id="trumpet-btn">O<span class="montserrat">Trumpet</span></div>
+      <div class="music-btn p barlow-condensed-regular" id="xylophone-btn">P<span class="montserrat">Xylophone</span></div>
+      <div class="music-btn q barlow-condensed-regular" id="organ-btn">Q<span class="montserrat">Organ</span></div>
+      <div class="music-btn r barlow-condensed-regular" id="bass-btn">R<span class="montserrat">Bass Drop</span></div>
+      <div class="music-btn t barlow-condensed-regular" id="kick2-btn">T<span class="montserrat">Kick 2</span></div>
+      <div class="music-btn u barlow-condensed-regular" id="ding-btn">U<span class="montserrat">Ding</span></div>
+      <div class="music-btn v barlow-condensed-regular" id="echo-btn">V<span class="montserrat">Echo</span></div>
+      <div class="music-btn w barlow-condensed-regular" id="chime-btn">W<span class="montserrat">Chime</span></div>
+      <div class="music-btn x barlow-condensed-regular" id="clap2-btn">X<span class="montserrat">Clap 2</span></div>
+      <div class="music-btn y barlow-condensed-regular" id="boom2-btn">Y<span class="montserrat">Boom 2</span></div>
+      <div class="music-btn z barlow-condensed-regular" id="ride2-btn">Z<span class="montserrat">Ride 2</span></div>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
