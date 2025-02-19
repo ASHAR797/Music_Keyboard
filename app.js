@@ -36,6 +36,9 @@ document.addEventListener("keydown", function (Event) {
        setTimeout(()=>{
               element.classList.remove("music-btn-active");
        }, 175)
+       setTimeout(()=>{
+        songEffects[e].pause();
+       } , 750)
     }
     
     else {
